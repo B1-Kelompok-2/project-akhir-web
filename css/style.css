@@ -21,8 +21,6 @@ p.colorfullText {
     letter-spacing: 2px;
 }
 
-
-
 * {
   margin: 0px; 
   padding: 0px; 
@@ -844,14 +842,20 @@ div#news-slider .owl-next {
   text-align: center;
 }
 
-.content h3 {
-    font-size: 16px;
-    font-family: "Roboto";
-    color: rgb(132, 171, 0);
-    line-height: 1.7;
-    text-align: center;  
-    padding-top: 25px;
+.content a {
+  font-size: 16px;
+  font-family: "Roboto";
+  color: #333333;
+  line-height: 1.7;
+  text-align: center;  
+  padding-top: 25px;
+  transition: 0.3s;
 }
+
+.content a:hover {
+  color: rgb(132, 171, 0);
+}
+
 /*
 * ==========================================
 * BANNER SECTION END
