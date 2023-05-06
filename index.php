@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Bakery</title>
+        <title>CemreBakery</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Cemre Tellioğlu Tunçay">
@@ -99,7 +99,7 @@
         <section id="section0" class="slider-area"> 
             <div class="main-slider owl-theme owl-carousel"> 
                 <!-- Start Slingle Slide -->
-                <div class="single-slide item" style="background-image: url(img/slider/1900x1000.png)">
+                <div class="single-slide item" style="background-image: url(img/slider/bg1.jpg)">
 
 
                     <!-- <img src="img/slider/placehold.png"> -->
@@ -111,9 +111,9 @@
                                 <div class="slide-content-wrapper text-center">
                                     <div class="slide-content">
                                         <img class="classic" src="img/logo/cemrebakerylogo.png">
-                                        <h3>BAKERY MAKES </h3>
-                                        <h2>A Taste Of xThe Good Life</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis leo vitae lacinia congue.</p>
+                                        <h3>CEMRE BAKERY </h3>
+                                        <h2>ORDER TODAY DELIVERY TODAY</h2>
+                                        <p>CAKE AT ONE-CLICK AWAY SERVICE</p>
 
                                         <a class="default-btn" href="#">Learn more</a>
                                         <img class="classic" src="img/new/icon.png">
@@ -125,7 +125,7 @@
                 </div>
                 <!-- End Single Slide -->
                 <!-- Start Slingle Slide -->
-                <div class="single-slide item" style="background-image: url(img/slider/1900x1000.png)">
+                <div class="single-slide item" style="background-image: url(img/slider/bg2.jpg)">
 
                     <!-- <img src="img/slider/bakery.jpg"> -->
                     <!-- Start Slider Content -->
@@ -136,9 +136,9 @@
                                             <div class="slide-content">
                                                 <img class="classic" src="img/logo/cemrebakerylogo.png">
 
-                                                <h3>BAKERY MAKES </h3>
-                                                <h2>A Taste Of  The Good Life</h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis leo vitae lacinia congue.</p>
+                                                <h3>CEMRE BAKERY </h3>
+                                                <h2>ORDER TODAY DELIVERY TODAY</h2>
+                                                <p>CAKE AT ONE-CLICK AWAY SERVICE</p>
                                                 <a class="default-btn" href="#">Learn more</a>
                                                 <img class="classic" src="img/new/icon.png">
 
@@ -149,7 +149,7 @@
                     <!-- Start Slider Content -->
                 </div>	
                 
-                <div class="single-slide item" style="background-image: url(img/slider/1900x1000.png)">
+                <div class="single-slide item" style="background-image: url(img/slider/bg3.jpg)">
 
                     <!--<img src="img/slider/bakery.jpg">-->
                     <!-- Start Slider Content -->
@@ -160,9 +160,9 @@
                                             <div class="slide-content">
                                                 <img class="classic" src="img/logo/cemrebakerylogo.png">
 
-                                                <h3>BAKERY MAKES </h3>
-                                                <h2>A Taste Of  The Good Life</h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis leo vitae lacinia congue.</p>
+                                                <h3>CEMRE BAKERY </h3>
+                                                <h2>ORDER TODAY DELIVERY TODAY</h2>
+                                                <p>CAKE AT ONE-CLICK AWAY SERVICE</p>
                                                 <a class="default-btn" href="#">Learn more</a>
                                                 <img class="classic" src="img/new/icon.png">
 
@@ -183,36 +183,36 @@
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="panel panel-default">
                             <div class="panel-body colorfullPanel text-center">
-                                <h3>Upp to %15 off</h3>
-                                <h2><span>June</span> Special Offer
+                                <h3>Cemre Bakery</h3>
+                                <h2><span>Special Offer</span> 
                                     <img class="classic" src="img/new/icon.png">
 
                                     </h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis leo vitae lacinia congue.</p>                            
+                                    <p>Dapatkan potongan 15% dengan minimal pembelian 200rb.</p>                            
                             </div>
                           </div>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="panel panel-default colorfullParent">
                             <div class="panel-body colorfullPanel text-center">
-                                <h3>Are You New Here?</h3>
-                                <h2><span>Learn</span> About Us
+                                <h3>Cemre Bakery</h3>
+                                <h2><span>PENGIRIMAN SELURUH INDONESIA</span>
                                     <img class="classic" src="img/new/icon.png">
 
                                     </h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis leo vitae lacinia congue.</p>                            
+                                    <p>Layanan pengiriman antar kota dapat membuat Anda menikmati pilihan kue Cemre Bakery dimanapun Anda berada.</p>                            
                                     </div>
                           </div>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="panel panel-default">
                             <div class="panel-body colorfullPanel text-center">
-                                <h3>Are You New Here?</h3>
-                                <h2><span>Learn</span> About Us
+                                <h3>Cemre Bakery</h3>
+                                <h2><span>LAYANAN ANTAR</span> 
                                     <img class="classic" src="img/new/icon.png">
 
                                     </h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis leo vitae lacinia congue.</p>                            
+                                    <p>Layanan antar dari kurir Cemre Bakery yang berpengalaman membuat kue Anda lebih aman.</</p>                            
                                     </div>
                           </div>
                     </div>
@@ -226,9 +226,9 @@
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12 ">
                         <div class="maintext text-center">
-                            <span>Serve You Since 1988</span>
-                            <h2>Welcome To Cemre Bakery</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis leo vitae lacinia congue.</p>                        
+                            <span>Melayani Sejak 2021</span>
+                            <h2>Selamat Datang di Cemre Bakery</h2>
+                            <p>Temukan Kue favoritmu dari pilihan kue terlaris bulan ini di Cemre Bakery!</p>                        
                             </div>  
                     </div>
                 </div>
@@ -240,8 +240,8 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="text-center">
-                                    <span>Serve You Since 1988</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis leo vitae lacinia congue.</p>                                
+                                    <span>Kualitas Pengiriman</span>
+                                    <p>Karena kami sangat mementingkan kondisi kue pada saat pengiriman, maka dari itu tim kami mempacking kue dengan sangat aman.</p>                                
                                     </div> 
                             </div> 
                         </div>
@@ -253,8 +253,8 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="text-center">
-                                    <span>Serve You Since 1988</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis leo vitae lacinia congue.</p>
+                                    <span>Harga Terjangkau</span>
+                                    <p>Nikmati berbagai macam pilihan kue dengan harga yang sangat terjangkau.</p>
                                 </div> 
                             </div> 
                         </div> 
@@ -266,8 +266,8 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="text-center">
-                                    <span>Serve You Since 1988</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis leo vitae lacinia congue. </p>
+                                    <span>Kualitas Produk</span>
+                                    <p>Meski dengan harga terjangkau, kami menjamin Anda tetap mendapatkan kualitas kue terbaik dari kami.</p>
                                 </div> 
                             </div> 
                         </div>  
@@ -280,10 +280,10 @@
 
         <div class="container">
             <div class="banner"
-            style="background-image: url('img/new/1170x268.png');">
+            style="background-image: url('img/new/cake4.jpg');">
                 <div class="content text-center">
-                    <span>NEW CAKE!!! GET IT FOR $12/PAX (LIMITED)</span>
-                    <h2>ORDER</h2>
+                    <span>KUE TERBARU!!! DAPATKAN DENGAN HARGA 55RB ( STOK TERBATAS)</span>
+                    <h2>Strawberry Pancake</h2>
                     <a href='login'>SHOP NOW</a>
                     <img class="classic" src="img/new/icon.png">
                 </div>
@@ -297,8 +297,8 @@
                 <div class="row">
                      <div class="col-xs-12">
                         <div class="section-title text-center">
-                            <h3>Premium Quality</h3>
-                            <h2>Cemre Bakery Fresh Cakes</h2>
+                            <h3>Kualitas Premium</h3>
+                            <h2>Cemre Bakery</h2>
                         </div>
                     </div>
                 </div>
@@ -308,50 +308,72 @@
                             <div id="news-slider" class="news-slider owl-theme owl-carousel">
                                 <div class="post-slide">
                                     <div class="post-img">
-                                        <div class="post-abs"><p>Progresso İtalian Style</p></div>
-                                        <img src="img/new/productnew.png" alt="">
+                                        <div class="post-abs"><p>Sacher Torte</p></div>
+                                        <img src="img/new/cake1.jpg" alt="">
                                     </div>
-                                    <h3 class="post-title"><a href="#">Progresso İtalian Style</a></h3>
+                                    <h3 class="post-title"><a href="#">Sacher Torte</a></h3>
                                     <p class="post-description">
-                                       12$
+                                       Rp.125.000
                                     </p>
                                 </div>
                  
                                 <div class="post-slide">
                                     <div class="post-img">
-                                        <div class="post-abs"><p>Progresso İtalian Style</p></div>
-                                        <img src="img/new/productnew.png" alt="">
+                                        <div class="post-abs"><p>Honey Cake</p></div>
+                                        <img src="img/new/cake2.jpg" alt="">
 
                                     </div>
-                                    <h3 class="post-title"><a href="#">Progresso İtalian Style</a></h3>
+                                    <h3 class="post-title"><a href="#">Honey Cake</a></h3>
                                     <p class="post-description">
-                                       12$
+                                       Rp.100.000
                                     </p>
                                 </div>
                                 
                                 <div class="post-slide">
                                     <div class="post-img">
-                                        <div class="post-abs"><p>Progresso İtalian Style</p></div>
-                                        <img src="img/new/productnew.png" alt="">
+                                        <div class="post-abs"><p>Key Green Tea</p></div>
+                                        <img src="img/new/cake3.jpg" alt="">
 
                                     </div>
-                                    <h3 class="post-title"><a href="#">Progresso İtalian Style</a></h3>
+                                    <h3 class="post-title"><a href="#">Key Green Tea</a></h3>
                                     <p class="post-description">
-                                       12$
+                                       Rp.130.000
                                     </p>
                                 </div>
                                 
                                 <div class="post-slide">
                                     <div class="post-img">
-                                        <div class="post-abs"><p>Progresso İtalian Style</p></div>
-                                        <img src="img/new/productnew.png" alt="">
+                                        <div class="post-abs"><p>Strawberry Pancake</p></div>
+                                        <img src="img/new/cake4.jpg" alt="">
 
                                     </div>
-                                    <h3 class="post-title"><a href="#">Progresso İtalian Style</a></h3>
+                                    <h3 class="post-title"><a href="#">Strawberry Pancake</a></h3>
                                     <p class="post-description">
-                                       12$
+                                       Rp.55.000
                                     </p>
-                                </div>           
+                                </div>
+                                
+                                <div class="post-slide">
+                                    <div class="post-img">
+                                        <div class="post-abs"><p>White Chocolate Cake</p></div>
+                                        <img src="img/new/cake5.jpg" alt="">
+                                    </div>
+                                    <h3 class="post-title"><a href="#">SWhite Chocolate Cake</a></h3>
+                                    <p class="post-description">
+                                    Rp.175.000
+                                    </p>
+                                </div>
+
+                                <div class="post-slide">
+                                    <div class="post-img">
+                                        <div class="post-abs"><p>Cupcakes</p></div>
+                                        <img src="img/new/cake6.jpg" alt="">
+                                    </div>
+                                    <h3 class="post-title"><a href="#">Cupcakes</a></h3>
+                                    <p class="post-description">
+                                    Rp.30.000
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -360,9 +382,9 @@
         </section>
         <!-- Section3 End -->
         <!-- Testimonial Area Start -->
-        <section id="section4" class="parallax-window" data-parallax="scroll" data-image-src="img/slider/1900x1000.png">
-            <h3>What We Say</h3>
-            <h2>Customer Testimonial</h2>
+        <section id="section4" class="parallax-window" data-parallax="scroll" data-image-src="img/slider/bg1.jpg">
+            <h3>Apa Kata Mereka</h3>
+            <h2>Testimoni Pembeli</h2>
         <div class="testimonial-area owl-theme owl-carousel" >
                
             <div class="col-md-12 col-sm-12 col-xs-12 noPadding text-center">
@@ -371,9 +393,9 @@
                 <div class="single-testimonial">
                     <div class="testimonial-info">
                         <div class="testimonial-content">
-                            <p>I must explain to you how all this mistaken idea of denoung pleure and praising pain was born and I will give you a coete account of the system, and expound the actual</p>
-                            <h4>David Morgan</h4>
-                            <h5>Student, CSE</h5>
+                            <p>Saya selalu memesan khusus untuk ulang tahun putra dan putri saya, dan saya selalu mengandalkan kualitas desain setiap tahun. Terima kasih telah membuat ulang tahun putra dan putri saya layak untuk diingat.</p>
+                            <h4>Eduard Naibaho</h4>
+                            <h5>Jakarta, 2021</h5>
                         </div>
                     </div>
                 </div>
@@ -382,9 +404,9 @@
                 <div class="single-testimonial">
                     <div class="testimonial-info">
                         <div class="testimonial-content">
-                            <p>I must explain to you how all this mistaken idea of denoung pleure and praising pain was born and I will give you a coete account of the system, and expound the actual</p>
-                            <h4>David Morgan</h4>
-                            <h5>Student, CSE</h5>
+                            <p>Honey Cake yang sangat lezat. Salah satu kue terbaik yang pernah saya rasakan sepanjang hidup saya.</p>
+                            <h4>Lita</h4>
+                            <h5>Bandung, 2021</h5>
                         </div>
                     </div>
                 </div>
@@ -393,9 +415,9 @@
                 <div class="single-testimonial">
                     <div class="testimonial-info">
                         <div class="testimonial-content">
-                            <p>I must explain to you how all this mistaken idea of denoung pleure and praising pain was born and I will give you a coete account of the system, and expound the actual</p>
-                            <h4>David Morgan</h4>
-                            <h5>Student, CSE</h5>
+                            <p>Strawberry Cupcakes , Thank you Cemre Bakery! saya pesan strawberry cupcakes, cake nya cantik sekali dan enak banget! Delivery on time dan pelayanan sangat professional.</p>
+                            <h4>Nina</h4>
+                            <h5>Bekasi, 2023</h5>
                         </div>
                     </div>
                 </div>
@@ -409,7 +431,7 @@
                     <div class="col-xs-12">
                         <div class="blog-section-title text-center">
                             <h3>Cemre Bakery Blog</h3>
-                            <h2>Our Latest News</h2>
+                            <h2>Berita Terbaru Kami</h2>
                         </div>
                     </div>
                 <div class="row">
@@ -418,15 +440,15 @@
                                 <div class="row">
                                     <div class="blog-section-date col-md-4 col-sm-4 col-xs-12 noPadding">
 
-                                        <p class="month">June</p>
-                                        <p class="date">6.6.1986</p>
+                                        <p class="month">April</p>
+                                        <p class="date">5.4.2021</p>
 
 
                                     </div>
                                     
                                     <div class="blog-section-description col-md-8 col-sm-8 col-xs-12 noPadding">
-                                        <h2>I must explain to you how all this mistaken </h2>
-                                        <p>idea of denouncing pleure and praising pain was born and I will give you a complete account of the system</p>
+                                        <h2>Meriahkan Hari Pendidikan Nasional dengan Kue Sehat </h2>
+                                        <p>Temukan berbagai macam kue dengan kandungan gizi yang sehat dan cocok untuk menunjang nutrisi anak</p>
                                         
                                         <a href="">Shop</a>
 
@@ -437,15 +459,15 @@
                                 <div class="row">
                                     <div class="blog-section-date col-md-4 col-sm-4 col-xs-12 noPadding">
 
-                                        <p class="month">June</p>
-                                        <p class="date">6.6.1986</p>
+                                        <p class="month">Agustus</p>
+                                        <p class="date">17.8.2022</p>
 
 
                                     </div>
                                     
                                     <div class="blog-section-description col-md-8 col-sm-8 col-xs-12 noPadding">
-                                        <h2>I must explain to you how all this mistaken </h2>
-                                        <p>idea of denouncing pleure and praising pain was born and I will give you a complete account of the system</p>
+                                        <h2>Temukan Kue untuk Acara Kemerdekaan disini! </h2>
+                                        <p>Hari kemerdekaan merupakan hari yang ditunggu-tunggu negara, oleh karena itu rayakan dengan kue yang lezat untuk merayakan Kemerdekaan</p>
                                         <a href="">Shop</a>
 
                                     </div>                            
@@ -500,14 +522,14 @@
         </section>
         <!-- Contact End -->
         <!-- Address Section Start -->
-        <section id="section7" class="row address parallax-window" data-parallax="scroll" data-image-src="img/slider/1900x1000.png">
+        <section id="section7" class="row address parallax-window" data-parallax="scroll" data-image-src="img/slider/bg.jpg">
             <div class="col-md-12">
                     <div class="row">
 
                         <div class="col-md-5 col-md-offset-1 addess-description">
-                            <span>CemreBakery Location</span>
-                            <h2>CemreBakery Address</h2>
-                            <p>I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born.</p>
+                            <span>Lokasi CemreBakery</span>
+                            <h2>CemreBakery</h2>
+                            <p>Memiliki 2 cabang di Kecamatan Soreang, Kabupaten Bandung, Provinsi Jawa Barat</p>
                             <ul>
                                 <li class="address-section">
                                     <div class="row">
@@ -515,7 +537,7 @@
                                             <i class="fa fa-address-card"></i>
                                         </div>
                                         <div class="col-md-10 col-sm-10 col-xs-10 lineHeight">
-                                            Primary:Lorem Ipsum Dolar<br>Second:Lorem Ipsum Dolar
+                                            Jl. Pelita, No.150 [cabang 1]<br>Jl. Cahaya, No.10 [cabang 2]
                                         </div>
                                     </div>
                                 </li>
@@ -525,7 +547,7 @@
                                             <i class="fa fa-phone"></i>                                       
                                          </div>
                                          <div class="col-md-10 col-sm-10 col-xs-10 lineHeight">
-                                            Primary:Lorem Ipsum Dolar<br>Second:Lorem Ipsum Dolar
+                                            0888-9762-4561 [admin 1]<br>0812-3456-9821 [admin 2]
                                         </div>
                                     </div>
                                     </li>
@@ -535,7 +557,7 @@
                                             <i class="fa fa-envelope"></i>                                       
                                         </div>
                                         <div class="col-md-10 col-sm-10 col-xs-10 lineHeight">
-                                            Primary:Lorem Ipsum Dolar<br>Second:Lorem Ipsum Dolar
+                                            cemrebakery@gmail.com<br>buyercomplaints@gmail.com
                                         </div>
                                     </div>
                                 </li>
@@ -565,20 +587,18 @@
                                         <p class="colorfullText">Fresh Bakery Store</p>
                                     </div>        
                                 </div>
-                                <p>I must explain to you how all this mistaken idea of denoung pleure and praising pain was born and give you a coete account of the system. </p>
+                                <p>CemreBakery berdiri pada tahun 2021 dengan mindset digital. Langkah pertama yang kami lakukan adalah memperkuat online channel dengan mengembangkan pembelian melalui website, menjadi salah satu pioneer digital di industri F&B Indonesia kala itu. </p>
                                 <div class="footer-social">
-                                    <ul class="list-group">
-                                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href=""><i class="fa fa-pinterest"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
-                                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                                    <ul class="list-group"> <br>
+                                        <p>Kunjungi Kami:</p>
+                                        <li><a href="https://www.instagram.com/rayaprsty/"><i class="fa fa-instagram"></i></a></li>
                                     </ul>    
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="single-widget">
-                                <h3>information</h3>
+                                <h3>INFORMASI</h3>
                                 <p class="lock"></p>
                                 <ul>
                                     <li class="footer-section">
@@ -587,7 +607,7 @@
                                                 <div class="footer-icon"></div>
                                             </div>
                                             <div class="col-md-10 col-sm-10 col-xs-10">
-                                                <a href=""><p>About Our Shop</p></a>
+                                                <a href=""><p>Pengiriman</p></a>
                                             </div>
                                         </div>
                                     </li>                                    
@@ -597,7 +617,7 @@
                                                 <div class="footer-icon"></div>
                                             </div>
                                             <div class="col-md-10 col-sm-10 col-xs-10">
-                                                <a href=""><p>Top Sellers</p></a>
+                                                <a href=""><p>Cara Pembayaran</p></a>
                                             </div>
                                         </div>
                                     </li>                                
@@ -607,36 +627,16 @@
                                                 <div class="footer-icon"></div>
                                             </div>
                                             <div class="col-md-10 col-sm-10 col-xs-10">
-                                                <a href=""><p>Our Blog</p></a>
+                                                <a href=""><p>Pertanyaan Seputar Toko</p></a>
                                             </div>
                                         </div>
-                                    </li> 
-                                    <li class="footer-section">
-                                        <div class="row">
-                                            <div class="col-md-2 col-sm-2 col-xs-2">
-                                                <div class="footer-icon"></div>
-                                            </div>
-                                            <div class="col-md-10 col-sm-10 col-xs-10">
-                                                <a href=""><p>New Products</p></a>
-                                            </div>
-                                        </div>
-                                    </li>                                     
-                                    <li class="footer-section">
-                                        <div class="row">
-                                            <div class="col-md-2 col-sm-2 col-xs-2">
-                                                <div class="footer-icon"></div>
-                                            </div>
-                                            <div class="col-md-10 col-sm-10 col-xs-10">
-                                                <a href=""><p>Secure Shopping</p></a>
-                                            </div>
-                                        </div>
-                                    </li>                               
+                                    </li>                              
                                 </ul>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="single-widget">
-                                <h3>useful links</h3>
+                                <h3>TERSEDIA DI</h3>
                                 <p class="lock"></p>
                                 <ul>
                                     <li class="footer-section">
@@ -645,7 +645,7 @@
                                                 <div class="footer-icon"></div>
                                             </div>
                                             <div class="col-md-10 col-sm-10 col-xs-10">
-                                                <a href=""><p>About Our Shop</p></a>
+                                                <a href=""><p>Tokopedia</p>
                                             </div>
                                         </div>
                                     </li>                                    
@@ -655,7 +655,7 @@
                                                 <div class="footer-icon"></div>
                                             </div>
                                             <div class="col-md-10 col-sm-10 col-xs-10">
-                                                <a href=""><p>Top Sellers</p></a>
+                                                <a href=""><p>ShopeeFood</p></a>
                                             </div>
                                         </div>
                                     </li>                                
@@ -665,7 +665,7 @@
                                                 <div class="footer-icon"></div>
                                             </div>
                                             <div class="col-md-10 col-sm-10 col-xs-10">
-                                                <a href=""><p>Our Blog</p></a>
+                                                <a href=""><p>GrabFood</p></a>
                                             </div>
                                         </div>
                                     </li> 
@@ -675,29 +675,19 @@
                                                 <div class="footer-icon"></div>
                                             </div>
                                             <div class="col-md-10 col-sm-10 col-xs-10">
-                                                <a href=""><p>New Products</p></a>
+                                                <a href=""><p>GoFood</p></a>
                                             </div>
                                         </div>
-                                    </li>                                     
-                                    <li class="footer-section">
-                                        <div class="row">
-                                            <div class="col-md-2 col-sm-2 col-xs-2">
-                                                <div class="footer-icon"></div>
-                                            </div>
-                                            <div class="col-md-10 col-sm-10 col-xs-10">
-                                                <a href=""><p>Secure Shopping</p></a>
-                                            </div>
-                                        </div>
-                                    </li>                               
+                                    </li>                                                                  
                                 </ul>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="single-widget">
-                                <h3>get in touch</h3>
+                                <h3>HUBUNGI TOKO KAMI</h3>
                                 <p class="lock"></p>
-                                <p>Your address goes here, Street<br>City, Roadno 785 New York</p>
-                                <p>+880  548  986  898  87<br>+880  659  785  658  98</p>
+                                <p>Kecamatan Soreang, Kabupaten Bandung, Provinsi Jawa Barat</p>
+                                <p>Jl. Pelita, No.150<br>Jl. Cahaya, No.10</p>
                                 <ul>
                                     <li class="address-section">
                                         <div class="row">
@@ -705,7 +695,7 @@
                                                 <i class="fa fa-address-card"></i>
                                             </div>
                                             <div class="col-md-10 col-sm-10 col-xs-10 single-widget-description noPadding">
-                                                <span>Primary:Lorem Ipsum Dolar Sıt</span>
+                                                <span>Cabang Utama: Jl. Pelita, No.150</span>
                                             </div>
                                         </div>
                                     </li>
@@ -715,7 +705,7 @@
                                                 <i class="fa fa-phone"></i>                                       
                                              </div>
                                              <div class="col-md-10 col-sm-10 col-xs-10 single-widget-description noPadding">
-                                                <span>Primary:Lorem Ipsum Dolar Sıt</span>
+                                                <span>Pemesanan: 0888-9762-4561</span>
                                             </div>
                                         </div>
                                         </li>
@@ -725,7 +715,7 @@
                                                 <i class="fa fa-envelope"></i>                                       
                                             </div>
                                             <div class="col-md-10 col-sm-10 col-xs-10 single-widget-description noPadding">
-                                                <span>Primary:Lorem Ipsum Dolar Sıt</span>
+                                                <span>Email: cemrebakery@gmail.com</span>
                                             </div>
                                         </div>
                                     </li>
@@ -733,12 +723,12 @@
                             </div>
                         </div>
                 </div>
-            </div>   
+            </div>
             <div class="footer-bottom text-center">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
-                            <p>Copyright © <a href="https://cemrethemes.com" target="_blank">Cemrethemes</a> 2020. All Right Reserved By Cemrethemes.</p>
+                            <p>Copyright © 2021. All Right Reserved By CemreBakery.</p>
                         </div> 
                     </div>
                 </div>    
