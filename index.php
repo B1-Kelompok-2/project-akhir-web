@@ -293,7 +293,6 @@
         <!-- Section3 Start -->
         <section id="section3">
             <div class="container">
-
                 <div class="row">
                      <div class="col-xs-12">
                         <div class="section-title text-center">
