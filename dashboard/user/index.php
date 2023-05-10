@@ -1,14 +1,26 @@
+<?php 
+require "../../functions php/konekdb.php";
+$menu = query("SELECT * FROM menu");
+
+// tampung di array dulu
+$data = array();
+
+// Looping untuk memasukkan data ke dalam array
+foreach ($menu as $menu) {
+    $data[] = $menu;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shopping Cart</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="">
-    
     <div class="container">
         <header>
             <h1>Your Shopping Cart</h1>
@@ -18,13 +30,35 @@
             </div>
         </header>
 
+        <div class="tes-json">
+            <span id="json">
+            <?php  
+            // Konversi array menjadi JSON
+            $json = json_encode($data);
+            ?>
+            </span>
+        </div>
+
         <div class="list">
-          
+            <?php $i = 0; ?>
+            <?php while($i < count($data)){ ?>
+                <div class="item">
+                    <img class="image" src="image/<?= $data[$i]["image"]; ?>" alt="">
+                    <div class="title"><?= $data[$i]["name"]; ?></div>
+                    <div class="price"><?= $data[$i]["price"]; ?></div>
+                    <button onclick="addToCard('<?= $i; ?>')">Add To Cart</button>
+                </div>
+            <?php 
+                $i++;
+                };
+            ?>
         </div>
     </div>
     <div class="card">
-        <h1>Card</h1>
+        <h1>Cart</h1>
         <ul class="listCard">
+            <li class="cart">
+            </li>
         </ul>
         <div class="checkOut">
             <div class="total">0</div>
