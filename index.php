@@ -196,7 +196,7 @@
                         <div class="panel panel-default colorfullParent">
                             <div class="panel-body colorfullPanel text-center">
                                 <h3>Cemre Bakery</h3>
-                                <h2><span>PENGIRIMAN SELURUH INDONESIA</span>
+                                <h2><span>Pengiriman Seluruh Indonesia</span>
                                     <img class="classic" src="img/new/icon.png">
 
                                     </h2>
@@ -208,7 +208,7 @@
                         <div class="panel panel-default">
                             <div class="panel-body colorfullPanel text-center">
                                 <h3>Cemre Bakery</h3>
-                                <h2><span>LAYANAN ANTAR</span> 
+                                <h2><span>Layanan Antar</span> 
                                     <img class="classic" src="img/new/icon.png">
 
                                     </h2>
