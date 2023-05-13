@@ -1,5 +1,6 @@
 <?php 
 session_start();
+
 require "../../functions php/konekdb.php";
 $menu = query("SELECT * FROM menu");
 

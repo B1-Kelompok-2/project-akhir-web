@@ -98,10 +98,10 @@ body {
 .sidebar-list-item:hover {
   background-color: var(--sidebar-hover-link);
 }
-.sidebar-list-item.active {
+.sidebar-list-item.Verified {
   background-color: var(--sidebar-active-link);
 }
-.sidebar-list-item.active:before {
+.sidebar-list-item.Verified:before {
   content: "";
   position: absolute;
   right: 0;
@@ -131,7 +131,7 @@ body {
   fill: var(--app-content-main-color);
 }
 
-.mode-switch.active .moon {
+.mode-switch.Verified .moon {
   fill: none;
 }
 
@@ -301,7 +301,7 @@ body {
 .action-button:hover {
   border-color: var(--action-color-hover);
 }
-.action-button:focus, .action-button.active {
+.action-button:focus, .action-button.Verified {
   outline: none;
   color: var(--action-color);
   border-color: var(--action-color);
@@ -337,7 +337,7 @@ body {
   left: 50%;
   transform: translatex(-50%);
 }
-.filter-menu.active {
+.filter-menu.Verified {
   visibility: visible;
   opacity: 1;
   top: calc(100% + 8px);
@@ -373,7 +373,7 @@ body {
 .filter-menu select:hover {
   border-color: var(--action-color-hover);
 }
-.filter-menu select:focus, .filter-menu select.active {
+.filter-menu select:focus, .filter-menu select.Verified {
   outline: none;
   color: var(--action-color);
   border-color: var(--action-color);
@@ -506,18 +506,18 @@ body {
   border-radius: 50%;
   margin-right: 4px;
 }
-.status.active {
+.status.Verified {
   color: #2ba972;
   background-color: rgba(43, 169, 114, 0.2);
 }
-.status.active:before {
+.status.Verified:before {
   background-color: #2ba972;
 }
-.status.disabled {
-  color: #59719d;
+.status.Unverified {
+  color: #acc4f1;
   background-color: rgba(89, 113, 157, 0.2);
 }
-.status.disabled:before {
+.status.Unverified:before {
   background-color: #59719d;
 }
 
@@ -613,3 +613,43 @@ body {
 .gridView .cell-label {
   opacity: 0.6;
 }
+
+/* tombol verified */
+.verified-btn {
+  padding: 0.8em 1.8em;
+  border: 2px solid #59719d;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+  transition: .3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #fff;
+ }
+ 
+ .verified-btn::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #59719d;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+ }
+ 
+ .verified-btn:hover::before {
+  width: 105%;
+ }
+ 
+ .verified-btn:hover {
+  cursor: pointer;
+  color: #fff;
+ }
+ 

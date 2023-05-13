@@ -19,6 +19,7 @@ if (isset($_POST["login"])){
             // user:staff1,pw:staff1
             if ($row['roles'] == 'staff'){
                 $_SESSION["staff"] = true;
+                $_SESSION["staffLogin"] = $_POST["username"];
                 header("Location: ../dashboard/staff");
                 // echo "Staff";
                 // exit;

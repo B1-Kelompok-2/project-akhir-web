@@ -15,7 +15,7 @@ foreach ($data as $item) {
   $user = mysqli_real_escape_string($conn, $item['user']); // Hindari SQL injection
   $gambar = mysqli_real_escape_string($conn, $item['image']); // Hindari SQL injection
   $orderan = mysqli_real_escape_string($conn, $item['name']); // Hindari SQL injection
-  $status = mysqli_real_escape_string($conn, 'disable'); // Hindari SQL injection
+  $status = mysqli_real_escape_string($conn, 'Unverified'); // Hindari SQL injection
   $hargaSatuan = mysqli_real_escape_string($conn, $item['price']); // Hindari SQL injection
   $kuantitas = mysqli_real_escape_string($conn, $item['quantity']); // Hindari SQL injection
   $totalHarga = mysqli_real_escape_string($conn, $item['total']); // Hindari SQL injection
