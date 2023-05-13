@@ -127,3 +127,12 @@ header .shopping span{
 .listCard .count{
     margin: 0 10px;
 }
+
+.tombol-push{
+    background-color: #E8BC0E;
+    border: none;
+}
+
+.tampungUser{
+    display: none;
+}

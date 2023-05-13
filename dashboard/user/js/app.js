@@ -4,23 +4,15 @@ let list = document.querySelector('.list');
 let listCard = document.querySelector('.listCard');
 let body = document.querySelector('body');
 let total = document.querySelector('.total');
-let quantity = document.querySelector('.quantity');
+let notifQuant = document.querySelector(".quantity");
 
-// const mysql = require('mysql');
+let menuPrice = 0; //hitung 
+let totalPrice = 0;
+let hitungNotif = 0;
 
-// const db = mysql.createConnection({
-//     host : "localhost",
-//     user : "root",
-//     password : "",
-//     database : "pa_web"
-// })
-
-// db.query("SELECT * FROM menu",(err, result) => {
-//     const json = JSON.stringify(result);
-//     console.log(json);
-// })
-
-
+let userLogin = [];
+let listCards = [];
+let sudah_ada = [];
 
 openShopping.addEventListener('click', ()=>{
     body.classList.add('active');
@@ -29,140 +21,166 @@ closeShopping.addEventListener('click', ()=>{
     body.classList.remove('active');
 })
 
-// let products = [
-//     {
-//         id: 1,
-//         name: 'PRODUCT NAME 1',
-//         image: '1.PNG',
-//         price: 120000
-//     },
-//     {
-//         id: 2,
-//         name: 'PRODUCT NAME 2',
-//         image: '2.PNG',
-//         price: 120000
-//     },
-//     {
-//         id: 3,
-//         name: 'PRODUCT NAME 3',
-//         image: '3.PNG',
-//         price: 220000
-//     },
-//     {
-//         id: 4,
-//         name: 'PRODUCT NAME 4',
-//         image: '4.PNG',
-//         price: 123000
-//     },
-//     {
-//         id: 5,
-//         name: 'PRODUCT NAME 5',
-//         image: '5.PNG',
-//         price: 320000
-//     },
-//     {
-//         id: 6,
-//         name: 'PRODUCT NAME 6',
-//         image: '6.PNG',
-//         price: 120000
-//     },
-// ];
-// function initApp(){
-    //     products.forEach((value, key) =>{
-        //         let newDiv = document.createElement('div');
-        //         newDiv.classList.add('sembunyi');
-        //         newDiv.innerHTML = `
-        //             <img src="image/${value.image}">
-        //             <div class="title">${value.name}</div>
-        //             <div class="price">${value.price.toLocaleString()}</div>
-        //             <button onclick="addToCard(${key})">Add To Cart</button>`;
-        //          list.appendChild(newDiv);
-        //     })
-        // }
-        // initApp();
-let listCards = [];
-let sudah_ada = [];
+// Ambil user
+// ambilUser()
+// function ambilUser(){
+//     userLogin = [];
+//     userLogin = [{nama : document.querySelector(".tampungUser").innerHTML}];
+//     // userLog = userLogin.innerHTML
+// } 
+
 function addToCard(key){
     let gambar = document.getElementsByClassName("image");
     let judul = document.getElementsByClassName("title");
     let harga = document.getElementsByClassName("price");
-    // let tombol = document.getElementsByClassName("tombol");
 
-    let image = gambar[key].src; // Mengambil nilai HTML dari elemen title
+    let tampungUser = [];
+    tampungUser = document.querySelector(".tampungUser");
+
+    let userLogin = tampungUser.innerHTML;
+    let image = gambar[key].getAttribute("src"); // Mengambil nilai HTML dari elemen title
     let title = judul[key].innerHTML; // Mengambil nilai HTML dari elemen title
     let price = parseInt(harga[key].innerHTML); // Mengambil nilai HTML dari elemen title
-    // title = JSON.parse(JSON.stringify(price));
+
     listCards.push({
+        user : userLogin,
         image : image,
         name : title,
-        price : price
+        price : price,
+        quantity : 1,
+        total : 0
     });
 
+    reloadCard();
+    }
     
-    // for (let i = 0; i < judul.length; i++) {
-    //     let image = gambar[key].src; // Mengambil nilai HTML dari elemen title
-    //     let title = judul[key].innerHTML; // Mengambil nilai HTML dari elemen title
-    //     let price = parseInt(harga[key].innerHTML); // Mengambil nilai HTML dari elemen title
-    //     // title = JSON.parse(JSON.stringify(price));
-    //     listCards.push({
-    //         image : image,
-    //         name : title,
-    //         price : price
-    //     }); 
-    //     // Menambahkan nilai title ke dalam array listCards
-    //     // console.log(title); // Menampilkan nilai ke console
-    // }
-        // title.quantity = 1;
-        // console.log(listCards[0]['name']);
-        reloadCard();
-}
 
 function reloadCard(){ 
-    let count = 0; // hitung kuantitas
-    // count = count + listCards.length; 
-    // listCard.innerHTML = '';
-    let totalPrice = 0; //hitung total
-    // console.log(listCards.length);
-    for (let i = 0; i < listCards.length; i++) {        
-        let image = listCards[i]["image"];
-        let name = listCards[i]["name"];
-        let price = listCards[i]["price"];
-        totalPrice = totalPrice + listCards[i]['price'];
-        if(listCards != null){
-            if (sudah_ada.includes(name)) {
-                console.log("sudah gan");
-            }
-            else{
-                count = 1;
-                sudah_ada.push(name);
-                
-                let newDiv = document.createElement('li');
-                newDiv.innerHTML = `
-                    <div><img src="${image}"/></div>
-                    <div>${name}</div>
-                    <div>Rp.${price}</div>
-                    <div>
-                        <button>-</button>
-                        <div class="count">${count}</div>
-                        <button>+</button>
-                    </div>          
-                    `;
-                listCard.appendChild(newDiv);
-            }
+    let image = listCards[listCards.length - 1]["image"];
+    let name = listCards[listCards.length - 1]["name"];
+    let price = listCards[listCards.length - 1]["price"];
+    let quantity = listCards[listCards.length - 1]["quantity"]; 
+    let indexArray = listCards.length - 1
+
+    if(listCards != null){
+        if (sudah_ada.includes(name)) {
+            console.log("sudah gan");
+            return;
+        }
+        else if (!sudah_ada.includes(name)){
+            let newDiv = document.createElement('li');
+            newDiv.innerHTML = `
+                <div><img src="${image}"/></div>
+                <div>${name}</div>
+                <div>Rp.${price}</div>
+                <div>
+                    <button onclick="gantiQuant('kurang',${indexArray})">-</button>
+                    <div class="count${indexArray}">${quantity}</div>
+                    <button onclick="gantiQuant('tambah',${indexArray})">+</button>
+                </div>          
+                `;
+            listCard.appendChild(newDiv);
+            sudah_ada.push(name);
+            hitung()
         }
     }
-    // console.log(count);
-    listCards = [];
-    total.innerText = totalPrice;
-
 }
 
-function changeQuantity(key, quantity){
-    if(quantity == 0){
-        delete listCards[key];
-    }else{
-        listCards[key].quantity = quantity;
-        listCards[key].price = quantity * products[key].price;
+function hitung(){
+    let price = listCards[listCards.length - 1]["price"];
+    let totalOrder = listCards[listCards.length -1]["total"];
+
+    totalOrder += price;
+    listCards[listCards.length -1]["total"] = totalOrder
+
+    menuPrice = menuPrice + price;
+    totalPrice = totalPrice + menuPrice;
+
+    hitungNotif += 1;
+    hitungNotif = hitungNotif 
+    
+    notifQuant.innerText = hitungNotif;
+    total.innerText = "Rp. " + totalPrice;
+    menuPrice = 0;
+    
+    // console.log(totalOrder);
+}
+
+function gantiQuant(param,nilai){ // yang mantep
+    let totalOrder = listCards[nilai]["total"];
+    let kuantitas = listCards[nilai]["quantity"];
+    let tagQuant = document.querySelector('.count' + nilai);
+    let tambahQuant = 1;
+    let price = listCards[nilai]["price"];
+    let tambah = 0;
+
+    if (param === "tambah"){
+        totalOrder += price;
+        kuantitas += tambahQuant;
+        tagQuant.innerText = kuantitas;
+
+        listCards[nilai]["total"] = totalOrder;
+        listCards[nilai]["quantity"] = kuantitas;
+        tambah = tambah + price;
+        totalPrice = totalPrice + tambah;
+        // console.log(totalOrder);
+        // total.innerText = totalPrice;
     }
-    reloadCard();
+
+    else if (param === "kurang"){
+        totalOrder -= price;
+        kuantitas -= tambahQuant;
+        tagQuant.innerText = kuantitas;
+
+        listCards[nilai]["total"] = totalOrder;
+        listCards[nilai]["quantity"] = kuantitas;
+        totalPrice = totalPrice - price;
+        // console.log(totalOrder);
+        // total.innerText = totalPrice;
+    }
+
+    if(kuantitas === 0){
+        tagQuant.parentNode.parentNode.remove();
+        hitungNotif -= 1;
+        hitungNotif = hitungNotif 
+    
+        notifQuant.innerText = hitungNotif;
+        delete listCards[nilai];
+        delete sudah_ada[nilai];
+    }
+
+    total.innerText = "Rp. " + totalPrice;
 }
+
+// push db
+function pushData() {
+    const dataArray = listCards;
+    // const dataLogin = userLogin;
+
+    if(totalPrice == 0){
+        alert("Pilih Menu Anda!")
+        location.reload();
+
+    }
+    else if (totalPrice > 0){
+        // Kirim permintaan AJAX ke server
+        $.ajax({
+        url: 'function/push.php',
+        method: 'POST',
+        data: {data: dataArray}, // Kirim data ke server dalam bentuk objek
+        // dataLogin: {dataLogin: dataLogin},
+        success: function(result) {
+            // console.log(result);
+            alert("Order Reserved");
+            location.reload();
+        },
+        error: function(xhr, status, error) {
+          console.error(error);
+        }
+        });
+    }
+    else{
+        alert("Hah?");
+    }
+}
+
