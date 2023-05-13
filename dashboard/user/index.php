@@ -4,6 +4,10 @@ session_start();
 require "../../functions php/konekdb.php";
 $menu = query("SELECT * FROM menu");
 
+if (!isset($_SESSION['user'])) {
+    header("Location:../../login");
+    exit;
+}
 
 // tampung di array dulu
 $data = array();

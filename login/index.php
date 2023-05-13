@@ -2,6 +2,8 @@
 session_start();
 require "functions/functions.php";
 
+session_unset();
+
 if (isset($_POST["login"])){
     $username = $_POST["username"];
     $password = $_POST["password"];

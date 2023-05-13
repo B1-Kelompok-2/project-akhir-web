@@ -65,7 +65,10 @@ foreach ($order_user as $order_user) {
           <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
         </svg>
       </button>
-      <button class="app-content-headerButton">Logout</button>
+      <form action="function/logout.php" method="post">
+        <input type="hidden" name="">
+        <button type="submit" class="app-content-headerButton">Logout</button>
+      </form>
     </div>
     <div class="app-content-actions">
       <input class="search-bar" placeholder="Search..." type="text">
@@ -147,7 +150,12 @@ foreach ($order_user as $order_user) {
           <div class="product-cell sales"><span class="cell-label">Price:</span>Rp. <?= $data[$i]['hargaSatuan']; ?></div>
           <div class="product-cell stock"><span class="cell-label">Quantity:</span><?= $data[$i]['kuantitas']; ?></div>
           <div class="product-cell price"><span class="cell-label">Total Price:</span>Rp.<?= $data[$i]['totalHarga']; ?></div>
-          <div class="product-cell price"><span class="cell-label">Verified Order:</span><button class="verified-btn">Verified</button></div>
+          <div class="product-cell price"><span class="cell-label">Verified Order:</span>
+            <form action="function/ubahData.php" method="post">
+              <input type="hidden" name="id" value="<?= $data[$i]['id'] ?>">
+              <button type='submit' class="verified-btn">Verified</button>
+            </form>
+        </div>
         </div>
       <?php 
         $i++;
