@@ -14,5 +14,17 @@ if ($_POST['kolom'] != 0){
     header("Location: ../");
     // echo $_SESSION["sort"];
 }
+
+if($_POST["keyword"] != 0){
+    $cari = $_POST["keyword"];
+    $_SESSION["sort"] = "SELECT * FROM order_user WHERE user LIKE '%$cari%' OR
+                            orderan LIKE '%$cari%' OR
+                            statusOrder LIKE '$cari%' OR
+                            hargaSatuan LIKE '%$cari%' OR
+                            kuantitas LIKE '%$cari%' OR
+                            totalHarga LIKE '%$cari%' 
+                            ;";
+    header("Location:../");
+}
  
 ?>

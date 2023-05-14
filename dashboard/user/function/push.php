@@ -24,7 +24,7 @@ foreach ($data as $item) {
   $intKuantitas = intval($kuantitas);  
   $intTotal = intval($totalHarga);
 
-  $query = "INSERT INTO order_user (user, image, orderan, status, hargaSatuan, kuantitas, totalHarga) VALUES ('$user', '$gambar', '$orderan', '$status', $intHargaSatuan, $intKuantitas, $intTotal);";
+  $query = "INSERT INTO order_user (user, image, orderan, statusOrder, hargaSatuan, kuantitas, totalHarga) VALUES ('$user', '$gambar', '$orderan', '$status', $intHargaSatuan, $intKuantitas, $intTotal);";
   
   // var_dump ($intTotal);
 

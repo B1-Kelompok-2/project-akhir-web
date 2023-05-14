@@ -12,7 +12,7 @@ if (mysqli_connect_errno()) {
 $id = $_POST['id'];
 
 // Query untuk mengubah data di MySQL
-$sql = "UPDATE order_user SET status = 'Verified' WHERE id = $id";
+$sql = "UPDATE order_user SET statusOrder = 'Verified' WHERE id = $id";
 
 // Eksekusi query
 if (mysqli_query($conn, $sql)) {

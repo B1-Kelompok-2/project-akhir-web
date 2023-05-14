@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 14, 2023 at 03:50 AM
+-- Generation Time: May 15, 2023 at 01:37 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -65,7 +65,9 @@ CREATE TABLE `menu` (
 
 INSERT INTO `menu` (`id`, `name`, `image`, `price`) VALUES
 (1, 'Kue 1', '1.PNG', 200000),
-(2, 'kue 2', '2.PNG', 300000);
+(2, 'Kue 2', '2.PNG', 300000),
+(3, 'Kue 3', '3.PNG', 400000),
+(4, 'Kue 4', '4.PNG', 100000);
 
 -- --------------------------------------------------------
 
@@ -78,7 +80,7 @@ CREATE TABLE `order_user` (
   `user` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
   `orderan` varchar(255) NOT NULL,
-  `status` varchar(20) NOT NULL,
+  `statusOrder` varchar(20) NOT NULL,
   `hargaSatuan` int(255) NOT NULL,
   `kuantitas` int(255) NOT NULL,
   `totalHarga` int(255) NOT NULL
@@ -88,9 +90,16 @@ CREATE TABLE `order_user` (
 -- Dumping data for table `order_user`
 --
 
-INSERT INTO `order_user` (`id`, `user`, `image`, `orderan`, `status`, `hargaSatuan`, `kuantitas`, `totalHarga`) VALUES
+INSERT INTO `order_user` (`id`, `user`, `image`, `orderan`, `statusOrder`, `hargaSatuan`, `kuantitas`, `totalHarga`) VALUES
 (23, 'user1', 'image/1.PNG', 'Kue 1', 'Verified', 200000, 1, 200000),
-(24, 'user1', 'image/2.PNG', 'kue 2', 'Verified', 300000, 2, 600000);
+(24, 'user1', 'image/2.PNG', 'kue 2', 'Verified', 300000, 2, 600000),
+(25, 'user1', 'image/2.PNG', 'kue 2', 'Verified', 300000, 5, 1500000),
+(26, 'user1', 'image/1.PNG', 'Kue 1', 'Verified', 200000, 3, 600000),
+(27, 'user1', 'image/2.PNG', 'kue 2', 'Verified', 300000, 6, 1800000),
+(28, 'user1', 'image/1.PNG', 'Kue 1', 'Verified', 200000, 5, 1000000),
+(30, '123', 'image/1.PNG', 'Kue 1', 'Unverified', 200000, 2, 400000),
+(31, '123', 'image/2.PNG', 'kue 2', 'Unverified', 300000, 3, 900000),
+(32, '123', 'image/4.PNG', 'Kue 4', 'Unverified', 100000, 1, 100000);
 
 --
 -- Indexes for dumped tables
@@ -128,13 +137,13 @@ ALTER TABLE `data_user`
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `order_user`
 --
 ALTER TABLE `order_user`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
