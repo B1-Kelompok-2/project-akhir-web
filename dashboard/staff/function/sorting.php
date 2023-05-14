@@ -11,7 +11,7 @@ if (!isset($_POST['submit'])){
 if ($_POST['kolom'] != 0){
     $isi = $_POST['kolom'];
     $_SESSION["sort"] = "SELECT * FROM order_user ORDER BY $isi ASC;";
-    // header("Location: ../");
+    header("Location: ../");
     // echo $_SESSION["sort"];
 }
  
