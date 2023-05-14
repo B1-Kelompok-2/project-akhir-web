@@ -17,7 +17,7 @@ $sql = "UPDATE order_user SET status = 'Verified' WHERE id = $id";
 // Eksekusi query
 if (mysqli_query($conn, $sql)) {
 //   echo "Data berhasil diubah.";
-    header("Location:index.php");
+    header("Location:../index.php");
 } 
 else {
   echo "Error: " . mysqli_error($conn);

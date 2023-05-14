@@ -25,7 +25,7 @@ foreach ($menu as $menu) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/jquery/node_modules/jquery/dist/jquery.min.js"></script>
-    <title>Shopping Cart</title>
+    <title>Cemre Bakery - Shopping Cart</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="">

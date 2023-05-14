@@ -3,6 +3,8 @@ session_start();
 require "functions/functions.php";
 
 session_unset();
+$_SESSION["sort"] = "SELECT * FROM order_user;";
+
 
 if (isset($_POST["login"])){
     $username = $_POST["username"];
@@ -22,7 +24,7 @@ if (isset($_POST["login"])){
             if ($row['roles'] == 'staff'){
                 $_SESSION["staff"] = true;
                 $_SESSION["staffLogin"] = $_POST["username"];
-                header("Location: ../dashboard/staff");
+                header("Location: ../dashboard/staff/function/sorting.php");
                 // echo "Staff";
                 // exit;
             }
