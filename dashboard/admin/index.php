@@ -20,18 +20,13 @@ foreach ($order_user as $order_users) {
     $data[] = $order_users;
 }
 
-// untuk tambah menu
-if (isset ($_POST["tambahMenu"])){
-  header("Location: function/tambahMenu.php");
-  var_dump($_POST);
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Cemre Bakery - Staff Dashboard</title>
+  <title>Cemre Bakery - Admin Dashboard</title>
+  <script src="../user/js/jquery/node_modules/jquery/dist/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -71,7 +66,7 @@ if (isset ($_POST["tambahMenu"])){
   </div>
   <div class="app-content">
     <div class="app-content-header">
-      <h1 class="app-content-headerText">Staff Admin</h1>
+      <h1 class="app-content-headerText">Admin Dashboard</h1>
       <button class="mode-switch" title="Switch Theme">
         <svg class="moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
           <defs></defs>
@@ -95,15 +90,15 @@ if (isset ($_POST["tambahMenu"])){
           <h2>Add Menu Form</h2>
           <form action="" method="post" id="contact-form">
             <label for="name">New Menu Name:</label>
-            <input type="text" id="name" name="menuName" required>
+            <input type="text" id="menuName" name="menuName" required>
 
             <label for="price">Price:</label>
-            <input type="text" id="price" name="menuPrice" required>
+            <input type="number" id="menuPrice" name="menuPrice" required>
 
             <label for="subject">Image:</label>
-            <input type="file" id="subject" name="menuImage" required>
+            <input type="file" id="menuImage" name="menuImage" required>
             <div class="containerTombolKirimModal">
-              <button class="tombolKirimModal" name="tambahMenu" type="submit">Add Menu</button>
+              <button onclick="addMenu();" class="tombolKirimModal" name="tambahMenu" type="submit">Add Menu</button>
             </div>
           </form>
         </div>
@@ -167,7 +162,7 @@ if (isset ($_POST["tambahMenu"])){
             </div>  
           <div class="product-cell sales"><span class="cell-label">Price: </span>Rp. <?= $data[$i]['price']; ?></div>
           <div class="product-cell price"><span class="cell-label">Delete Menu?:</span>
-            <form action="" method="post">
+            <form action="function/hapusData.php" method="post">
               <input type="hidden" name="id" value="<?= $data[$i]['id'] ?>">
               <button type='submit' class="verified-btn">Delete</button>
             </form>

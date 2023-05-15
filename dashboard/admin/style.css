@@ -704,7 +704,6 @@ body {
 }
 
 .tombolKirimModal{
-  z-index: 3;
   padding: 8px 17px;
   border: none;
   color: #fff;

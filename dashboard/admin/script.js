@@ -53,3 +53,36 @@ contactForm.addEventListener('submit', function(event) {
 
   // Lakukan pengiriman formulir di sini
 });
+
+// buat push
+let tampungMenu = [];
+function addMenu(){
+  let judul = document.querySelector("#menuName").value;
+  let harga = document.querySelector("#menuPrice").value;
+  let gambar = document.querySelector("#menuImage").files[0].name;
+
+  tampungMenu.push({
+      judulMenu : judul,
+      hargaMenu : harga,
+      gambarMenu : gambar
+  });
+
+  pushMenu();
+}
+
+function pushMenu() {
+  $.ajax({
+  url: 'function/push.php',
+  method: 'POST',
+  data: {data: tampungMenu}, // Kirim data ke server dalam bentuk objek
+  // dataLogin: {dataLogin: dataLogin},
+  success: function(result) {
+      console.log(result);
+      alert("Menu Added!");
+      location.reload();
+  },
+  error: function(xhr, status, error) {
+    console.error(error);
+  }
+  });
+}
