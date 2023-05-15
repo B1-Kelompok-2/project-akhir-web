@@ -32,8 +32,9 @@ if (isset($_POST["login"])){
             // user:admin, pw:admin123
             else if ($row['roles'] == 'admin'){
                 $_SESSION["admin"] = true;
-                // header("Location: dashboard_admin.php");
-                echo "Admin";
+                $_SESSION["adminLogin"] = $_POST["username"];
+                header("Location: ../dashboard/admin/");
+                // echo "Admin";
                 // exit;
             }
 
