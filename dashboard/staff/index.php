@@ -11,13 +11,18 @@ if (!isset($_SESSION['sorts'])){
 require "../../functions php/konekdb.php";
 
 $order_user = query($_SESSION['sort']);
+$transaksiUser = query("SELECT * FROM transaksi;");
 
 // tampung di array dulu
 $data = array();
+$dataTransaksi = array();
 
 // Looping untuk memasukkan data ke dalam array
 foreach ($order_user as $order_users) {
     $data[] = $order_users;
+}
+foreach ($transaksiUser as $transaksiUsers) {
+  $dataTransaksi[] = $transaksiUsers;
 }
 
 ?>
@@ -175,6 +180,9 @@ foreach ($order_user as $order_users) {
             </button>
           </form>
         </div>
+        <div class="product-cell price">
+          Pay Status
+        </div>
         <div class="product-cell price">Verifying Order</div>
       </div>
       <?php $i = 0; ?>
@@ -195,6 +203,7 @@ foreach ($order_user as $order_users) {
           <div class="product-cell sales"><span class="cell-label">Price:</span>Rp. <?= $data[$i]['hargaSatuan']; ?></div>
           <div class="product-cell stock"><span class="cell-label">Quantity:</span><?= $data[$i]['kuantitas']; ?></div>
           <div class="product-cell price"><span class="cell-label">Total Price:</span>Rp. <?= $data[$i]['totalHarga']; ?></div>
+          <div class="product-cell price"><span class="cell-label">Pay Status:</span><?= $dataTransaksi[$i]['terbayar']; ?></div>
           <div class="product-cell price"><span class="cell-label">Verified Order:</span>
             <form action="function/ubahData.php" method="post">
               <input type="hidden" name="id" value="<?= $data[$i]['id'] ?>">
