@@ -36,6 +36,12 @@ foreach ($menu as $menu) {
                 <img src="image/shopping.svg">
                 <span class="quantity">0</span>
             </div>
+            <div class="containerTombolStatus">
+                <button onclick="userDashboard()" class="tombolStatus">
+                    <span class="button_top"> Status
+                    </span>
+                </button>
+            </div>
         </header>
 
         <div class="tampungUser"><?= $_SESSION["userLogin"] ?></div>
@@ -47,7 +53,7 @@ foreach ($menu as $menu) {
                     <img class="image" src="image/<?= $data[$i]["image"]; ?>" alt="">
                     <div class="title"><?= $data[$i]["name"]; ?></div>
                     <div class="price"><?= $data[$i]["price"]; ?></div>
-                    <button onclick="addToCard(<?= $i; ?>)">Add To Cart</button>
+                    <button class="tombolAddCart" onclick="addToCard(<?= $i; ?>)">Add To Cart</button>
                 </div>
             <?php 
                 $i++;

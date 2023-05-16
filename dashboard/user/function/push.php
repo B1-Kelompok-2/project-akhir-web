@@ -1,4 +1,5 @@
 <?php
+require "../../../functions php/konekdb.php";
 // Terima data dari permintaan AJAX
 // $data1 = $_POST['data1'];
 if (!isset($_POST['data'])){
@@ -23,22 +24,31 @@ else{
     $hargaSatuan = mysqli_real_escape_string($conn, $item['price']); // Hindari SQL injection
     $kuantitas = mysqli_real_escape_string($conn, $item['quantity']); // Hindari SQL injection
     $totalHarga = mysqli_real_escape_string($conn, $item['total']); // Hindari SQL injection
-  
+    
     $intHargaSatuan = intval($hargaSatuan);
     $intKuantitas = intval($kuantitas);  
     $intTotal = intval($totalHarga);
-  
-    $query = "INSERT INTO order_user (user, image, orderan, statusOrder, hargaSatuan, kuantitas, totalHarga) VALUES ('$user', '$gambar', '$orderan', '$status', $intHargaSatuan, $intKuantitas, $intTotal);";
     
+    $query = "INSERT INTO order_user (user, image, orderan, statusOrder, hargaSatuan, kuantitas, totalHarga) VALUES ('$user', '$gambar', '$orderan', '$status', $intHargaSatuan, $intKuantitas, $intTotal);";
+    mysqli_query($conn, $query);
     // var_dump ($intTotal);
-  
+
+    $bayar = mysqli_real_escape_string($conn, 'Not Paid Yet'); // Hindari SQL injection
+    $queryIdOrder = "SELECT id FROM order_user ORDER BY id DESC LIMIT 1";
+    $arrayIdOrder = query($queryIdOrder);
+    $strId = $arrayIdOrder[0]['id'];
+    $intId = intval($strId);
+    $query = "INSERT INTO transaksi VALUES ('', $intId, '$user', '$orderan', '$status', '$bayar');";
+    // var_dump ($intId);
     mysqli_query($conn, $query);
   }
 }
 
 
-// Tutup koneksi ke database
 mysqli_close($conn);
+
+
+// Tutup koneksi ke database
 
 // Kirim respon ke klien
 

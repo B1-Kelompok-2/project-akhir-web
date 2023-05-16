@@ -74,9 +74,9 @@ function reloadCard(){
                 <div>${name}</div>
                 <div>Rp.${price}</div>
                 <div>
-                    <button onclick="gantiQuant('kurang',${indexArray})">-</button>
+                    <button class="tombolKuanti" onclick="gantiQuant('kurang',${indexArray})">-</button>
                     <div class="count${indexArray}">${quantity}</div>
-                    <button onclick="gantiQuant('tambah',${indexArray})">+</button>
+                    <button class="tombolKuanti" onclick="gantiQuant('tambah',${indexArray})">+</button>
                 </div>          
                 `;
             listCard.appendChild(newDiv);
@@ -170,7 +170,7 @@ function pushData() {
         data: {data: dataArray}, // Kirim data ke server dalam bentuk objek
         // dataLogin: {dataLogin: dataLogin},
         success: function(result) {
-            // console.log(result);
+            console.log(result);
             alert("Order Reserved");
             location.reload();
         },
@@ -184,3 +184,6 @@ function pushData() {
     }
 }
 
+function userDashboard(){
+    window.location.href = "status/index.php"
+}
