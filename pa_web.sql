@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2023 at 01:37 AM
+-- Generation Time: May 16, 2023 at 05:41 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -64,10 +64,9 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`id`, `name`, `image`, `price`) VALUES
-(1, 'Kue 1', '1.PNG', 200000),
-(2, 'Kue 2', '2.PNG', 300000),
-(3, 'Kue 3', '3.PNG', 400000),
-(4, 'Kue 4', '4.PNG', 100000);
+(196, 'Cupcakes', 'cake6.jpg', 10000),
+(197, 'Sacher Torte', 'cake1.jpg', 40000),
+(198, 'Strawberry Pancake', 'cake4.jpg', 55000);
 
 -- --------------------------------------------------------
 
@@ -91,15 +90,33 @@ CREATE TABLE `order_user` (
 --
 
 INSERT INTO `order_user` (`id`, `user`, `image`, `orderan`, `statusOrder`, `hargaSatuan`, `kuantitas`, `totalHarga`) VALUES
-(23, 'user1', 'image/1.PNG', 'Kue 1', 'Verified', 200000, 1, 200000),
-(24, 'user1', 'image/2.PNG', 'kue 2', 'Verified', 300000, 2, 600000),
-(25, 'user1', 'image/2.PNG', 'kue 2', 'Verified', 300000, 5, 1500000),
-(26, 'user1', 'image/1.PNG', 'Kue 1', 'Verified', 200000, 3, 600000),
-(27, 'user1', 'image/2.PNG', 'kue 2', 'Verified', 300000, 6, 1800000),
-(28, 'user1', 'image/1.PNG', 'Kue 1', 'Verified', 200000, 5, 1000000),
-(30, '123', 'image/1.PNG', 'Kue 1', 'Unverified', 200000, 2, 400000),
-(31, '123', 'image/2.PNG', 'kue 2', 'Unverified', 300000, 3, 900000),
-(32, '123', 'image/4.PNG', 'Kue 4', 'Unverified', 100000, 1, 100000);
+(59, 'qwe', 'image/cake1.jpg', 'Sacher Torte', 'Unverified', 40000, 1, 40000),
+(60, 'qwe', 'image/cake6.jpg', 'Cupcakes', 'Unverified', 10000, 1, 10000),
+(61, 'qwe', 'image/cake4.jpg', 'Strawberry Pancake', 'Unverified', 55000, 1, 55000);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transaksi`
+--
+
+CREATE TABLE `transaksi` (
+  `id` int(4) NOT NULL,
+  `id_order` int(4) NOT NULL,
+  `user` varchar(255) NOT NULL,
+  `item_order` varchar(255) NOT NULL,
+  `status` varchar(20) NOT NULL,
+  `terbayar` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `transaksi`
+--
+
+INSERT INTO `transaksi` (`id`, `id_order`, `user`, `item_order`, `status`, `terbayar`) VALUES
+(5, 59, 'qwe', 'Sacher Torte', 'Unverified', 'Not Paid Yet'),
+(6, 60, 'qwe', 'Cupcakes', 'Unverified', 'Not Paid Yet'),
+(7, 61, 'qwe', 'Strawberry Pancake', 'Unverified', 'Not Paid Yet');
 
 --
 -- Indexes for dumped tables
@@ -124,6 +141,12 @@ ALTER TABLE `order_user`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `transaksi`
+--
+ALTER TABLE `transaksi`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -137,13 +160,19 @@ ALTER TABLE `data_user`
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=199;
 
 --
 -- AUTO_INCREMENT for table `order_user`
 --
 ALTER TABLE `order_user`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
+--
+-- AUTO_INCREMENT for table `transaksi`
+--
+ALTER TABLE `transaksi`
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
