@@ -12,7 +12,7 @@ if (mysqli_connect_errno()) {
 $id = $_POST['id'];
 
 // Query untuk mengubah data di MySQL
-$sql = "DELETE FROM menu WHERE id = $id";
+$sql = "UPDATE transaksi SET terbayar = 'Paid Off' WHERE id = $id";
 
 // Eksekusi query
 if (mysqli_query($conn, $sql)) {

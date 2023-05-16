@@ -10,14 +10,20 @@ if (!isset($_SESSION['user'])) {
 
 require "../../../functions php/konekdb.php";
 
-$order_user = query("SELECT * FROM transaksi;");
+$userLogged = $_SESSION["userLogin"];
+$order_user = query("SELECT * FROM order_user WHERE user = '$userLogged';");
+$transaksiUser = query("SELECT * FROM transaksi WHERE user = '$userLogged';");
 
 // tampung di array dulu
 $data = array();
+$dataTransaksi = array();
 
 // Looping untuk memasukkan data ke dalam array
 foreach ($order_user as $order_users) {
     $data[] = $order_users;
+}
+foreach ($transaksiUser as $transaksiUsers) {
+  $dataTransaksi[] = $transaksiUsers;
 }
 
 ?>
@@ -26,7 +32,6 @@ foreach ($order_user as $order_users) {
 <head>
   <meta charset="UTF-8">
   <title>Cemre Bakery - Admin Dashboard</title>
-  <script src="../user/js/jquery/node_modules/jquery/dist/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -58,7 +63,7 @@ foreach ($order_user as $order_users) {
       <!-- <div class="account-info-picture">
         <img src="https://images.unsplash.com/photo-1527736947477-2790e28f3443?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE2fHx3b21hbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="Account">
       </div> -->
-      <div class="account-info-name"><?= $_SESSION["adminLogin"] ?></div>
+      <div class="account-info-name"><?= $_SESSION["userLogin"] ?></div>
       <button class="account-info-more">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
       </button>
@@ -117,13 +122,31 @@ foreach ($order_user as $order_users) {
 
     <div class="products-area-wrapper tableView">
       <div class="products-header">
+        <div class="product-cell category">
+          Id Order
+        </div>
         <div class="product-cell image">
-          Menu
+        Order Items
         </div>
         <div class="product-cell category">
-          Price
+          Order By
         </div>
-        <div class="product-cell price">Delete Menu ?</div>
+        <div class="product-cell status-cell">
+          Status
+        </div>
+        <div class="product-cell sales">
+          Price  
+        </div>
+        <div class="product-cell stock">
+          Quantity
+        </div>
+        <div class="product-cell price">
+          Total Price
+        </div>
+        <div class="product-cell price">
+          Pay Status
+        </div>
+        <div class="product-cell price">Pay The Bill?</div>
       </div>
       <?php $i = 0; ?>
       <?php while($i < count($data)){?>
@@ -131,15 +154,24 @@ foreach ($order_user as $order_users) {
           <button class="cell-more-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
           </button>
-          <div class="product-cell image">
-            <img src="../user/image/<?= $data[$i]['image'] ?>" alt="product">
-            <span><?= $data[$i]['name']; ?></span>
-            </div>  
-          <div class="product-cell sales"><span class="cell-label">Price: </span>Rp. <?= $data[$i]['price']; ?></div>
-          <div class="product-cell price"><span class="cell-label">Delete Menu?:</span>
-            <form action="function/hapusData.php" method="post">
-              <input type="hidden" name="id" value="<?= $data[$i]['id'] ?>">
-              <button type='submit' class="verified-btn">Delete</button>
+          <div class="product-cell category"><span class="cell-label">Order Id:</span><?= $dataTransaksi[$i]['id_order']; ?></div>
+            <div class="product-cell image">
+              <img src="../../user/<?= $data[$i]['image'] ?>" alt="product">
+              <span><?= $data[$i]['orderan']; ?></span>
+            </div>
+          <div class="product-cell category"><span class="cell-label">Order By:</span><?= $data[$i]['user']; ?></div>
+          <div class="product-cell status-cell">
+            <span class="cell-label">Status:</span>
+            <span class="status <?= $data[$i]['statusOrder'] ?>"><?= $data[$i]['statusOrder']; ?></span>
+          </div>
+          <div class="product-cell sales"><span class="cell-label">Price:</span>Rp. <?= $data[$i]['hargaSatuan']; ?></div>
+          <div class="product-cell stock"><span class="cell-label">Quantity:</span><?= $data[$i]['kuantitas']; ?></div>
+          <div class="product-cell price"><span class="cell-label">Total Price:</span>Rp. <?= $data[$i]['totalHarga']; ?></div>
+          <div class="product-cell price"><span class="cell-label">Pay Status:</span><?= $dataTransaksi[$i]['terbayar']; ?></div>
+          <div class="product-cell price"><span class="cell-label">Verified Order:</span>
+            <form action="function/bayar.php" method="post">
+              <input type="hidden" name="id" value="<?= $dataTransaksi[$i]['id'] ?>">
+              <button type='submit' class="verified-btn">Paid Off</button>
             </form>
           </div>
         </div>
