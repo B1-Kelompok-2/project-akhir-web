@@ -51,4 +51,9 @@ pada halaman ini akan menampilkan informasi lengkap Cemre Bakery mulai dari alam
 
 ## Halaman Staff
 ![App Screenshot](img/readme/staff.png)
-setelah penggunan login menggunkan role staff maka akan menampilkan halaman diatas. Pada halaman ini,staf dapat melihat daftar rincian produk dari Cemre Bakery.
+setelah penggunan login menggunkan role staff maka akan menampilkan halaman diatas. Pada halaman ini,staf dapat melihat daftar rincian produk dari Cemre Bakery selain itu jika user memesan kue maka staff lah yang akan mem verified data pesanan yang dipesan oleh user.
+
+## Halaman Admin
+![App Screenshot](img/readme/admin.png)
+![App Screenshot](img/readme/admin1.png)
+setelah penggunan login menggunkan role admin, pengguna akan masuk ke dashboard admin pada halaman ini admin dapat mengedit menu seperti menambah dan menghapus menu yang ada.
